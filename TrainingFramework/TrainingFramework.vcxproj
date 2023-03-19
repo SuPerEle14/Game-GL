@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FC024EC8-32F4-4657-A2CB-14D2B3A931F8}</ProjectGuid>
+    <RootNamespace>TrainingFramework</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\BIN\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\Game-GL\SoundEngine\SFML-audio\precompiled\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Game-GL\SoundEngine\SFML-audio\precompiled\win32\vs2015\lib\release;D:\Game-GL\SoundEngine\SFML-audio\precompiled\win32\vs2015\lib\debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\BIN\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>D:\Game-GL\SoundEngine\SFML-audio\precompiled\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Game-GL\SoundEngine\SFML-audio\precompiled\win32\vs2015\lib\release;D:\Game-GL\SoundEngine\SFML-audio\precompiled\win32\vs2015\lib\debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>SFML_STATIC;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>box2d.lib;libEGL.lib;libGLESv2.lib;sfml-audio-d.lib;sfml-main-d.lib;sfml-system-d.lib;sfml-window-d.lib;vld.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>SFML_STATIC;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>box2d.lib;libEGL.lib;libGLESv2.lib;sfml-audio-d.lib;sfml-main-d.lib;sfml-system-d.lib;sfml-window-d.lib;vld.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Animation2D.cpp" />
+    <ClCompile Include="AudioManager.cpp" />
+    <ClCompile Include="Block.cpp" />
+    <ClCompile Include="Box.cpp" />
+    <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Chaser.cpp" />
+    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="ContactManager.cpp" />
+    <ClCompile Include="CubeTexture.cpp" />
+    <ClCompile Include="Dungeon.cpp" />
+    <ClCompile Include="DynamicBlade.cpp" />
+    <ClCompile Include="EffectManager.cpp" />
+    <ClCompile Include="EventManager.cpp" />
+    <ClCompile Include="FlagManager.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="Guard.cpp" />
+    <ClCompile Include="Gun.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="LevelButton.cpp" />
+    <ClCompile Include="LevelState.cpp" />
+    <ClCompile Include="MapState.cpp" />
+    <ClCompile Include="MenuState.cpp" />
+    <ClCompile Include="Model.cpp" />
+    <ClCompile Include="MyContactListener.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="ObjectPool.cpp" />
+    <ClCompile Include="Physic.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerPrefs.cpp" />
+    <ClCompile Include="PrefabManager.cpp" />
+    <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="Renderer2D.cpp" />
+    <ClCompile Include="ResourceManager.cpp" />
+    <ClCompile Include="SawBlade.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="Sensor.cpp" />
+    <ClCompile Include="Shaders.cpp" />
+    <ClCompile Include="SpinnerFly.cpp" />
+    <ClCompile Include="Star.cpp" />
+    <ClCompile Include="StateBase.cpp" />
+    <ClCompile Include="StateManager.cpp" />
+    <ClCompile Include="Switch.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TrainingFramework.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp" />
+    <ClCompile Include="TreasureChest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Animation2D.h" />
+    <ClInclude Include="AudioManager.h" />
+    <ClInclude Include="Block.h" />
+    <ClInclude Include="Box.h" />
+    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="Button.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Chaser.h" />
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="ContactManager.h" />
+    <ClInclude Include="CubeTexture.h" />
+    <ClInclude Include="Dungeon.h" />
+    <ClInclude Include="DynamicBlade.h" />
+    <ClInclude Include="EffectManager.h" />
+    <ClInclude Include="EventManager.h" />
+    <ClInclude Include="FlagManager.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="Globals.h" />
+    <ClInclude Include="Guard.h" />
+    <ClInclude Include="Gun.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="LevelButton.h" />
+    <ClInclude Include="LevelState.h" />
+    <ClInclude Include="MapState.h" />
+    <ClInclude Include="MenuState.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="MyContactListener.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="ObjectPool.h" />
+    <ClInclude Include="Physic.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerPrefs.h" />
+    <ClInclude Include="PrefabManager.h" />
+    <ClInclude Include="Renderer.h" />
+    <ClInclude Include="Renderer2D.h" />
+    <ClInclude Include="ResourceManager.h" />
+    <ClInclude Include="SawBlade.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="Sensor.h" />
+    <ClInclude Include="Shaders.h" />
+    <ClInclude Include="SpinnerFly.h" />
+    <ClInclude Include="Star.h" />
+    <ClInclude Include="StateBase.h" />
+    <ClInclude Include="StateManager.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Switch.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="Transform.h" />
+    <ClInclude Include="TreasureChest.h" />
+    <ClInclude Include="Vertex.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Readme.doc" />
+    <None Include="Sounds\Level.ogg" />
+    <None Include="Sounds\Map.ogg" />
+    <None Include="Sounds\Menu.ogg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utilities\Utilities.vcxproj">
+      <Project>{0d44529e-f7dd-4454-8ead-9afd857f53b4}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Textures\BackgroundPause1.tga" />
+    <Image Include="Textures\BackgroundPause2.tga" />
+    <Image Include="Textures\BackgroundPause3.tga" />
+    <Image Include="Textures\BackgroundWin.tga" />
+    <Image Include="Textures\BackgroundWin1.tga" />
+    <Image Include="Textures\BackGround\BackGround2.tga" />
+    <Image Include="Textures\BackGround\BackGround3.tga" />
+    <Image Include="Textures\BackGround\BackGround4.tga" />
+    <Image Include="Textures\BackGround\BackGround5.tga" />
+    <Image Include="Textures\BackGround\BackGround7.tga" />
+    <Image Include="Textures\bg.tga" />
+    <Image Include="Textures\Block3.tga" />
+    <Image Include="Textures\Block4.tga" />
+    <Image Include="Textures\Block\Block_L_Up.tga" />
+    <Image Include="Textures\Block\Soil1.tga" />
+    <Image Include="Textures\Block\Soil3.tga" />
+    <Image Include="Textures\Chest.tga" />
+    <Image Include="Textures\ChestBeOpened.tga" />
+    <Image Include="Textures\ChestOpened.tga" />
+    <Image Include="Textures\Chest\chest_00.tga" />
+    <Image Include="Textures\Chest\chest_01.tga" />
+    <Image Include="Textures\Chest\chest_02.tga" />
+    <Image Include="Textures\Chest\chest_03.tga" />
+    <Image Include="Textures\Chest\chest_04.tga" />
+    <Image Include="Textures\Chest\chest_05.tga" />
+    <Image Include="Textures\Chest\chest_06.tga" />
+    <Image Include="Textures\Chest\chest_07.tga" />
+    <Image Include="Textures\Gem.tga" />
+    <Image Include="Textures\Ghost\1.tga" />
+    <Image Include="Textures\Ghost\10.tga" />
+    <Image Include="Textures\Ghost\11.tga" />
+    <Image Include="Textures\Ghost\12.tga" />
+    <Image Include="Textures\Ghost\2.tga" />
+    <Image Include="Textures\Ghost\3.tga" />
+    <Image Include="Textures\Guard\1.tga" />
+    <Image Include="Textures\Guard\2.tga" />
+    <Image Include="Textures\Guard\3.tga" />
+    <Image Include="Textures\Guard\4.tga" />
+    <Image Include="Textures\Guard\5.tga" />
+    <Image Include="Textures\Guard\6.tga" />
+    <Image Include="Textures\Gun\Bullet2.tga" />
+    <Image Include="Textures\Gun\Gun.tga" />
+    <Image Include="Textures\SawBlade\Blade4.tga" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Managers\GameObjectPrefab.txt" />
+    <Text Include="Managers\Level0SM.txt" />
+    <Text Include="Managers\Level1SM.txt" />
+    <Text Include="Managers\Level2SM.txt" />
+    <Text Include="Managers\Level3SM.txt" />
+    <Text Include="Managers\Level4SM.txt" />
+    <Text Include="Managers\Level5SM.txt" />
+    <Text Include="Managers\Level6SM.txt" />
+    <Text Include="Managers\Level7SM.txt" />
+    <Text Include="Managers\Level8SM.txt" />
+    <Text Include="Managers\LevelsMapSM.txt" />
+    <Text Include="Managers\MenuSM.txt" />
+    <Text Include="Managers\PlayerPref.txt" />
+    <Text Include="Managers\PM.txt" />
+    <Text Include="Managers\RM.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Sounds\Ambiance.wav" />
+    <Media Include="Sounds\ChestOpen.wav" />
+    <Media Include="Sounds\Click.wav" />
+    <Media Include="Sounds\Die.wav" />
+    <Media Include="Sounds\Gun.wav" />
+    <Media Include="Sounds\Hit.wav" />
+    <Media Include="Sounds\Jump1.wav" />
+    <Media Include="Sounds\Jump2.wav" />
+    <Media Include="Sounds\Saw1.wav" />
+    <Media Include="Sounds\Saw2.wav" />
+    <Media Include="Sounds\Saw3.wav" />
+    <Media Include="Sounds\Star.wav" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,54 @@
+#Objects: 9
+0. BackgroundWin
+RENDERER BackgroundWin1
+POSITION 0 0 0
+ROTATION 0 0 0
+SCALE 1 1 1
+
+1. BackgroundPause
+RENDERER BackgroundPause2
+POSITION 0 0 0
+ROTATION 0 0 0
+SCALE 1 1 1
+
+2. Background
+RENDERER BackgroundPause3
+POSITION 0 0 0
+ROTATION 0 0 0
+SCALE 1.2 1.2 1.2
+
+3. TapToStart
+RENDERER TapToStart
+POSITION 0 0 0
+ROTATION 0 0 0
+SCALE 1 1 1
+
+4. PauseButton
+RENDERER SoundButtonOn
+POSITION 405 220 0
+ROTATION 0 0 0
+SCALE 1 1 1
+
+5. ContinueButton
+RENDERER ContinueButton
+POSITION 20 50 0
+ROTATION 0 0 0
+SCALE 1 1 1
+
+6. RestartButton
+RENDERER RestartButton
+POSITION -110 155 0
+ROTATION 0 0 0
+SCALE 1 1 1
+
+7. QuitButton
+RENDERER QuitButton
+POSITION 160 155 0
+ROTATION 0 0 0
+SCALE 1 1 1
+
+8. NextLevelButton
+RENDERER PlayButton
+POSITION 20 50 0
+ROTATION 0 0 0
+SCALE 1 1 1
